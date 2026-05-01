@@ -721,7 +721,7 @@ class IBApp(EWrapper, EClient):
         df.columns = pd.MultiIndex.from_tuples(df.columns)
 
         ts: str = datetime.now(ET).strftime("%Y%m%d_%H%M%S")
-        filename: str = f"C:/Users/mnapo/Desktop/HFT supervised/ALL_DATA/ticks/ticks_{ts}.parquet"
+        filename: str = f"C:/Users/mnapo/Desktop/IBKR Stuff/ALL_DATA/ticks/ticks_{ts}.parquet"
 
         df.to_parquet(filename, index=False)
 
