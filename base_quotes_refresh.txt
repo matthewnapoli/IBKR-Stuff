@@ -1,5 +1,5 @@
-bootstrap_base_quotes completed at 20260428 19:35:20 UTC
-elapsed_secs=2.4
+bootstrap_base_quotes completed at 20260505 16:47:16 UTC
+elapsed_secs=25.1
 rows=86
 wrote_json=True
 missing_count=0
@@ -12,89 +12,89 @@ sources:
   snapshot: 35
 
 quotes:
-    0 EUR.USD bid=1.17092 ask=1.17094 bid_size=2000000.0 ask_size=1000000.0 source=snapshot local=EUR.USD expiry=
-    1 GBP.USD bid=1.35153 ask=1.35156 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=GBP.USD expiry=
-    2 AUD.USD bid=0.7182 ask=0.71822 bid_size=2000000.0 ask_size=2000000.0 source=snapshot local=AUD.USD expiry=
-    3 NZD.USD bid=0.58846 ask=0.58848 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=NZD.USD expiry=
-    4 USD.CAD bid=1.36845 ask=1.36847 bid_size=1000000.0 ask_size=2000000.0 source=snapshot local=USD.CAD expiry=
-    5 USD.JPY bid=159.63 ask=159.635 bid_size=1000000.0 ask_size=2000000.0 source=snapshot local=USD.JPY expiry=
-    6 USD.CHF bid=0.78955 ask=0.78956 bid_size=78000.0 ask_size=2000000.0 source=snapshot local=USD.CHF expiry=
-    7 USD.SEK bid=9.2691 ask=9.27129 bid_size=500000.0 ask_size=1000000.0 source=snapshot local=USD.SEK expiry=
-    8 USD.CNH bid=6.83964 ask=6.83979 bid_size=1000000.0 ask_size=2000000.0 source=snapshot local=USD.CNH expiry=
-    9 USD.MXN bid=17.38857 ask=17.39 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.MXN expiry=
-   10 USD.ILS bid=2.95834 ask=2.95954 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.ILS expiry=
-   11 USD.SGD bid=1.27665 ask=1.2767 bid_size=500000.0 ask_size=2500000.0 source=snapshot local=USD.SGD expiry=
-   12 USD.SAR bid=3.75078 ask=3.75093 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.SAR expiry=
-   13 USD.KRW bid=1472.0 ask=1474.0 bid_size=2000000.0 ask_size=2000000.0 source=MIDPOINT local=USD.KRW expiry=
-   14 USD.TRY bid=45.0541 ask=45.06088 bid_size=124000.0 ask_size=1000000.0 source=historical_bid_ask local=USD.TRY expiry=
-   15 USD.PLN bid=3.62818 ask=3.6287 bid_size=2000000.0 ask_size=1000000.0 source=snapshot local=USD.PLN expiry=
-   16 AAPL bid=270.41 ask=270.43 bid_size=100.0 ask_size=300.0 source=snapshot local=AAPL expiry=
-   17 MSFT bid=427.71 ask=427.78 bid_size=40.0 ask_size=40.0 source=snapshot local=MSFT expiry=
-   18 AMZN bid=259.53 ask=259.56 bid_size=100.0 ask_size=100.0 source=snapshot local=AMZN expiry=
-   19 NVDA bid=213.78 ask=213.79 bid_size=100.0 ask_size=600.0 source=snapshot local=NVDA expiry=
-   20 GOOGL bid=349.89 ask=349.92 bid_size=100.0 ask_size=200.0 source=snapshot local=GOOGL expiry=
-   21 META bid=670.2 ask=670.28 bid_size=40.0 ask_size=80.0 source=snapshot local=META expiry=
-   22 BRK B bid=476.54 ask=476.8 bid_size=80.0 ask_size=80.0 source=historical_bid_ask local=BRK B expiry=
-   23 LLY bid=870.05 ask=870.49 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=LLY expiry=
-   24 TSLA bid=377.56 ask=377.61 bid_size=40.0 ask_size=80.0 source=snapshot local=TSLA expiry=
-   25 AVGO bid=400.11 ask=400.24 bid_size=40.0 ask_size=40.0 source=snapshot local=AVGO expiry=
-   26 JPM bid=311.6 ask=311.66 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=JPM expiry=
-   27 V bid=309.26 ask=309.36 bid_size=200.0 ask_size=40.0 source=historical_bid_ask local=V expiry=
-   28 MA bid=508.14 ask=508.3 bid_size=80.0 ask_size=40.0 source=historical_bid_ask local=MA expiry=
-   29 XOM bid=150.64 ask=150.65 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=XOM expiry=
-   30 UNH bid=353.25 ask=353.58 bid_size=120.0 ask_size=40.0 source=historical_bid_ask local=UNH expiry=
-   31 HD bid=331.89 ask=333.35 bid_size=40.0 ask_size=440.0 source=historical_bid_ask local=HD expiry=
-   32 PG bid=148.12 ask=148.88 bid_size=400.0 ask_size=100.0 source=historical_bid_ask local=PG expiry=
-   33 COST bid=998.0 ask=1007.11 bid_size=80.0 ask_size=120.0 source=snapshot local=COST expiry=
-   34 MRK bid=110.55 ask=110.95 bid_size=400.0 ask_size=100.0 source=historical_bid_ask local=MRK expiry=
-   35 ABBV bid=196.99 ask=199.59 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=ABBV expiry=
-   36 PEP bid=154.0 ask=155.72 bid_size=100.0 ask_size=100.0 source=snapshot local=PEP expiry=
-   37 KO bid=75.67 ask=75.75 bid_size=100.0 ask_size=400.0 source=historical_bid_ask local=KO expiry=
-   38 BAC bid=52.61 ask=52.85 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=BAC expiry=
-   39 CRM bid=180.26 ask=180.91 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=CRM expiry=
-   40 ADBE bid=239.42 ask=240.0 bid_size=80.0 ask_size=640.0 source=snapshot local=ADBE expiry=
-   41 NFLX bid=91.41 ask=91.45 bid_size=20.0 ask_size=20.0 source=snapshot local=NFLX expiry=
-   42 WMT bid=127.59 ask=128.02 bid_size=100.0 ask_size=400.0 source=snapshot local=WMT expiry=
-   43 LIN bid=509.44 ask=510.95 bid_size=40.0 ask_size=40.0 source=snapshot local=LIN expiry=
-   44 ACN bid=177.0 ask=179.0 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=ACN expiry=
-   45 AMD bid=327.52 ask=327.82 bid_size=100.0 ask_size=100.0 source=snapshot local=AMD expiry=
-   46 DIS bid=102.2 ask=102.7 bid_size=100.0 ask_size=500.0 source=historical_bid_ask local=DIS expiry=
-   47 MCD bid=291.66 ask=292.04 bid_size=40.0 ask_size=400.0 source=historical_bid_ask local=MCD expiry=
-   48 DHR bid=179.78 ask=182.24 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=DHR expiry=
-   49 CSCO bid=88.16 ask=88.52 bid_size=500.0 ask_size=100.0 source=snapshot local=CSCO expiry=
-   50 ABT bid=92.8 ask=93.3 bid_size=200.0 ask_size=100.0 source=historical_bid_ask local=ABT expiry=
-   51 TMO bid=460.0 ask=471.04 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=TMO expiry=
-   52 VZ bid=47.14 ask=47.26 bid_size=200.0 ask_size=100.0 source=historical_bid_ask local=VZ expiry=
-   53 INTC bid=83.82 ask=83.85 bid_size=1000.0 ask_size=100.0 source=snapshot local=INTC expiry=
-   54 NKE bid=45.18 ask=45.19 bid_size=700.0 ask_size=100.0 source=historical_bid_ask local=NKE expiry=
-   55 TXN bid=266.0 ask=268.9 bid_size=100.0 ask_size=200.0 source=snapshot local=TXN expiry=
-   56 CMCSA bid=27.5 ask=27.75 bid_size=3000.0 ask_size=100.0 source=snapshot local=CMCSA expiry=
-   57 PFE bid=26.83 ask=26.86 bid_size=400.0 ask_size=1200.0 source=historical_bid_ask local=PFE expiry=
-   58 PM bid=160.1 ask=166.0 bid_size=100.0 ask_size=1000.0 source=historical_bid_ask local=PM expiry=
-   59 UPS bid=108.43 ask=110.0 bid_size=100.0 ask_size=500.0 source=historical_bid_ask local=UPS expiry=
-   60 RTX bid=173.5 ask=175.4 bid_size=200.0 ask_size=100.0 source=ADJUSTED_LAST local=RTX expiry=
-   61 LOW bid=235.0 ask=252.28 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=LOW expiry=
-   62 HON bid=210.68 ask=215.48 bid_size=100.0 ask_size=100.0 source=snapshot local=HON expiry=
-   63 QCOM bid=147.29 ask=147.77 bid_size=500.0 ask_size=500.0 source=snapshot local=QCOM expiry=
-   64 NEE bid=94.6 ask=95.83 bid_size=100.0 ask_size=300.0 source=historical_bid_ask local=NEE expiry=
-   65 IBM bid=228.5 ask=228.8 bid_size=960.0 ask_size=80.0 source=historical_bid_ask local=IBM expiry=
-   66 ES bid=7171.0 ask=7171.25 bid_size=23.0 ask_size=40.0 source=historical_bid_ask local=ESM6 expiry=20260618
-   67 NQ bid=27192.25 ask=27192.75 bid_size=2.0 ask_size=3.0 source=historical_bid_ask local=NQM6 expiry=20260618
-   68 ESTX50 bid=5789.0 ask=5790.0 bid_size=43.0 ask_size=263.0 source=historical_bid_ask local=FESX 20260619 M expiry=20260619
-   69 MNI bid=59185.0 ask=59200.0 bid_size=23.0 ask_size=23.0 source=historical_bid_ask local=MNIM6 expiry=20260611
-   70 CL bid=99.96 ask=99.97 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=CLK6 expiry=20260421
-   71 BZ bid=111.17 ask=111.22 bid_size=1.0 ask_size=2.0 source=historical_bid_ask local=BZM6 expiry=20260430
-   72 NG bid=2.54 ask=2.554 bid_size=7.0 ask_size=1.0 source=historical_bid_ask local=NGK26 expiry=20260428
-   73 GC bid=4590.1 ask=4591.1 bid_size=1.0 ask_size=3.0 source=historical_bid_ask local=GCJ6 expiry=20260428
-   74 SI bid=73.305 ask=73.4 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=SIJ6 expiry=20260428
-   75 PL bid=1942.4 ask=1947.9 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=PLJ6 expiry=20260428
-   76 HG bid=5.9145 ask=5.9165 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=HGJ6 expiry=20260428
-   77 ZC bid=465.0 ask=465.5 bid_size=1658.0 ask_size=445.0 source=historical_bid_ask local=ZCK6 expiry=20260514
-   78 ZW bid=649.5 ask=649.75 bid_size=10.0 ask_size=2.0 source=historical_bid_ask local=ZWK6 expiry=20260514
-   79 ZS bid=1174.25 ask=1174.75 bid_size=41.0 ask_size=53.0 source=historical_bid_ask local=ZSK6 expiry=20260514
-   80 LE bid=252.65 ask=252.75 bid_size=4.0 ask_size=1.0 source=historical_bid_ask local=LEJ6 expiry=20260430
-   81 HE bid=94.125 ask=94.2 bid_size=3.0 ask_size=2.0 source=historical_bid_ask local=HEJ6 expiry=20260415
-   82 SOFR3 bid=96.335 ask=96.3375 bid_size=194.0 ask_size=2883.0 source=historical_bid_ask local=SR3F6 expiry=20260414
+    0 EUR.USD bid=1.16866 ask=1.16868 bid_size=1000000.0 ask_size=1500000.0 source=snapshot local=EUR.USD expiry=
+    1 GBP.USD bid=1.3539 ask=1.35395 bid_size=2000000.0 ask_size=3500000.0 source=snapshot local=GBP.USD expiry=
+    2 AUD.USD bid=0.71573 ask=0.71577 bid_size=5000000.0 ask_size=3000000.0 source=snapshot local=AUD.USD expiry=
+    3 NZD.USD bid=0.58786 ask=0.58788 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=NZD.USD expiry=
+    4 USD.CAD bid=1.36152 ask=1.36155 bid_size=2000000.0 ask_size=1000000.0 source=snapshot local=USD.CAD expiry=
+    5 USD.JPY bid=157.279 ask=157.284 bid_size=1000000.0 ask_size=1600000.0 source=snapshot local=USD.JPY expiry=
+    6 USD.CHF bid=0.78337 ask=0.7834 bid_size=2000000.0 ask_size=7500000.0 source=snapshot local=USD.CHF expiry=
+    7 USD.SEK bid=9.2791 ask=9.28051 bid_size=1000000.0 ask_size=25000.0 source=snapshot local=USD.SEK expiry=
+    8 USD.CNH bid=6.83167 ask=6.8318 bid_size=1000000.0 ask_size=2000000.0 source=snapshot local=USD.CNH expiry=
+    9 USD.MXN bid=17.48591 ask=17.48733 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.MXN expiry=
+   10 USD.ILS bid=2.94569 ask=2.9463 bid_size=1132000.0 ask_size=1000000.0 source=snapshot local=USD.ILS expiry=
+   11 USD.SGD bid=1.27695 ask=1.277 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.SGD expiry=
+   12 USD.SAR bid=3.75217 ask=3.75234 bid_size=1000000.0 ask_size=1000000.0 source=snapshot local=USD.SAR expiry=
+   13 USD.KRW bid=1468.0 ask=1474.5 bid_size=1.7014118346046923e+38 ask_size=1.7014118346046923e+38 source=MIDPOINT local=USD.KRW expiry=
+   14 USD.TRY bid=45.21968 ask=45.22106 bid_size=1000000.0 ask_size=1000000.0 source=historical_bid_ask local=USD.TRY expiry=
+   15 USD.PLN bid=3.642 ask=3.64257 bid_size=500000.0 ask_size=1000000.0 source=snapshot local=USD.PLN expiry=
+   16 AAPL bid=276.5 ask=276.7 bid_size=360.0 ask_size=80.0 source=snapshot local=AAPL expiry=
+   17 MSFT bid=416.16 ask=416.58 bid_size=40.0 ask_size=80.0 source=snapshot local=MSFT expiry=
+   18 AMZN bid=273.2 ask=273.73 bid_size=200.0 ask_size=100.0 source=snapshot local=AMZN expiry=
+   19 NVDA bid=198.7 ask=198.89 bid_size=100.0 ask_size=100.0 source=snapshot local=NVDA expiry=
+   20 GOOGL bid=384.34 ask=384.94 bid_size=120.0 ask_size=80.0 source=snapshot local=GOOGL expiry=
+   21 META bid=612.8 ask=613.55 bid_size=40.0 ask_size=320.0 source=snapshot local=META expiry=
+   22 BRK B bid=469.98 ask=478.72 bid_size=40.0 ask_size=120.0 source=historical_bid_ask local=BRK B expiry=
+   23 LLY bid=955.8 ask=968.0 bid_size=40.0 ask_size=80.0 source=historical_bid_ask local=LLY expiry=
+   24 TSLA bid=393.06 ask=393.48 bid_size=40.0 ask_size=80.0 source=snapshot local=TSLA expiry=
+   25 AVGO bid=418.5 ask=420.2 bid_size=80.0 ask_size=200.0 source=snapshot local=AVGO expiry=
+   26 JPM bid=306.63 ask=320.02 bid_size=200.0 ask_size=80.0 source=historical_bid_ask local=JPM expiry=
+   27 V bid=327.25 ask=332.72 bid_size=40.0 ask_size=160.0 source=historical_bid_ask local=V expiry=
+   28 MA bid=499.0 ask=509.99 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=MA expiry=
+   29 XOM bid=153.0 ask=153.69 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=XOM expiry=
+   30 UNH bid=368.6 ask=370.09 bid_size=40.0 ask_size=440.0 source=historical_bid_ask local=UNH expiry=
+   31 HD bid=307.7 ask=315.7 bid_size=40.0 ask_size=80.0 source=historical_bid_ask local=HD expiry=
+   32 PG bid=143.47 ask=150.0 bid_size=200.0 ask_size=200.0 source=historical_bid_ask local=PG expiry=
+   33 COST bid=1007.01 ask=1047.37 bid_size=40.0 ask_size=40.0 source=snapshot local=COST expiry=
+   34 MRK bid=109.05 ask=123.63 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=MRK expiry=
+   35 ABBV bid=188.12 ask=216.37 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=ABBV expiry=
+   36 PEP bid=154.18 ask=155.52 bid_size=100.0 ask_size=100.0 source=snapshot local=PEP expiry=
+   37 KO bid=77.9 ask=85.09 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=KO expiry=
+   38 BAC bid=52.0 ask=53.32 bid_size=100.0 ask_size=1500.0 source=historical_bid_ask local=BAC expiry=
+   39 CRM bid=180.3 ask=189.0 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=CRM expiry=
+   40 ADBE bid=250.01 ask=257.5 bid_size=40.0 ask_size=40.0 source=snapshot local=ADBE expiry=
+   41 NFLX bid=91.2 ask=91.4 bid_size=100.0 ask_size=100.0 source=snapshot local=NFLX expiry=
+   42 WMT bid=129.26 ask=133.09 bid_size=100.0 ask_size=300.0 source=snapshot local=WMT expiry=
+   43 LIN bid=451.4 ask=503.0 bid_size=40.0 ask_size=40.0 source=snapshot local=LIN expiry=
+   44 ACN bid=173.65 ask=196.47 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=ACN expiry=
+   45 AMD bid=348.0 ask=348.59 bid_size=300.0 ask_size=100.0 source=snapshot local=AMD expiry=
+   46 DIS bid=99.19 ask=103.48 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=DIS expiry=
+   47 MCD bid=284.27 ask=288.99 bid_size=80.0 ask_size=80.0 source=historical_bid_ask local=MCD expiry=
+   48 DHR bid=157.58 ask=177.46 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=DHR expiry=
+   49 CSCO bid=90.4 ask=94.88 bid_size=100.0 ask_size=500.0 source=snapshot local=CSCO expiry=
+   50 ABT bid=87.12 ask=96.04 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=ABT expiry=
+   51 TMO bid=422.27 ask=506.88 bid_size=40.0 ask_size=40.0 source=historical_bid_ask local=TMO expiry=
+   52 VZ bid=46.3 ask=50.0 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=VZ expiry=
+   53 INTC bid=98.92 ask=99.01 bid_size=500.0 ask_size=2000.0 source=snapshot local=INTC expiry=
+   54 NKE bid=43.29 ask=43.55 bid_size=500.0 ask_size=300.0 source=historical_bid_ask local=NKE expiry=
+   55 TXN bid=258.41 ask=282.0 bid_size=100.0 ask_size=1200.0 source=snapshot local=TXN expiry=
+   56 CMCSA bid=27.08 ask=27.2 bid_size=100.0 ask_size=100.0 source=snapshot local=CMCSA expiry=
+   57 PFE bid=26.44 ask=26.5 bid_size=500.0 ask_size=100.0 source=historical_bid_ask local=PFE expiry=
+   58 PM bid=166.0 ask=172.0 bid_size=1000.0 ask_size=1000.0 source=historical_bid_ask local=PM expiry=
+   59 UPS bid=95.95 ask=97.29 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=UPS expiry=
+   60 RTX bid=172.0 ask=178.2 bid_size=100.0 ask_size=100.0 source=ADJUSTED_LAST local=RTX expiry=
+   61 LOW bid=204.39 ask=244.23 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=LOW expiry=
+   62 HON bid=192.03 ask=229.3 bid_size=100.0 ask_size=100.0 source=snapshot local=HON expiry=
+   63 QCOM bid=168.46 ask=168.85 bid_size=200.0 ask_size=100.0 source=snapshot local=QCOM expiry=
+   64 NEE bid=95.2 ask=101.4 bid_size=100.0 ask_size=100.0 source=historical_bid_ask local=NEE expiry=
+   65 IBM bid=230.78 ask=231.98 bid_size=100.0 ask_size=400.0 source=historical_bid_ask local=IBM expiry=
+   66 ES bid=7254.5 ask=7254.75 bid_size=10.0 ask_size=6.0 source=historical_bid_ask local=ESM6 expiry=20260618
+   67 NQ bid=27929.75 ask=27930.75 bid_size=1.0 ask_size=2.0 source=historical_bid_ask local=NQM6 expiry=20260618
+   68 ESTX50 bid=5798.0 ask=5799.0 bid_size=185.0 ask_size=65.0 source=historical_bid_ask local=FESX 20260619 M expiry=20260619
+   69 MNI bid=59800.0 ask=59815.0 bid_size=20.0 ask_size=20.0 source=historical_bid_ask local=MNIM6 expiry=20260611
+   70 CL bid=103.66 ask=103.68 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=CLK6 expiry=20260421
+   71 BZ bid=112.51 ask=112.55 bid_size=1.0 ask_size=2.0 source=historical_bid_ask local=BZM6 expiry=20260430
+   72 NG bid=2.821 ask=2.822 bid_size=3.0 ask_size=3.0 source=historical_bid_ask local=NGK26 expiry=20260428
+   73 GC bid=4544.4 ask=4546.1 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=GCJ6 expiry=20260428
+   74 SI bid=73.51 ask=73.575 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=SIJ6 expiry=20260428
+   75 PL bid=1971.4 ask=1973.7 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=PLJ6 expiry=20260428
+   76 HG bid=5.903 ask=5.905 bid_size=5.0 ask_size=3.0 source=historical_bid_ask local=HGJ6 expiry=20260428
+   77 ZC bid=472.0 ask=472.75 bid_size=4.0 ask_size=19.0 source=historical_bid_ask local=ZCK6 expiry=20260514
+   78 ZW bid=629.0 ask=629.75 bid_size=10.0 ask_size=3.0 source=historical_bid_ask local=ZWK6 expiry=20260514
+   79 ZS bid=1204.5 ask=1205.25 bid_size=6.0 ask_size=3.0 source=historical_bid_ask local=ZSK6 expiry=20260514
+   80 LE bid=251.9 ask=251.975 bid_size=1.7014118346046923e+38 ask_size=1.7014118346046923e+38 source=historical_bid_ask local=LEJ6 expiry=20260430
+   81 HE bid=91.7 ask=91.775 bid_size=1.7014118346046923e+38 ask_size=1.7014118346046923e+38 source=historical_bid_ask local=HEJ6 expiry=20260415
+   82 SOFR3 bid=96.335 ask=96.34 bid_size=3520.0 ask_size=2827.0 source=historical_bid_ask local=SR3F6 expiry=20260414
    83 YIA bid=99.2675 ask=99.2675 bid_size=1.7014118346046923e+38 ask_size=1.7014118346046923e+38 source=TRADES local=YIAM25 expiry=20260618
-   84 GBL bid=124.99 ask=125.0 bid_size=419.0 ask_size=410.0 source=historical_bid_ask local=FGBL 20260608 M expiry=20260608
-   85 CONF bid=154.47 ask=154.9 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=CONF 20260608 M expiry=20260608
+   84 GBL bid=125.06 ask=125.07 bid_size=235.0 ask_size=913.0 source=historical_bid_ask local=FGBL 20260608 M expiry=20260608
+   85 CONF bid=154.7 ask=155.39 bid_size=1.0 ask_size=1.0 source=historical_bid_ask local=CONF 20260608 M expiry=20260608
