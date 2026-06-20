@@ -48,6 +48,12 @@ TIMESTAMP_COLUMN = ("base", "timestamp")
 RAW_TIMESTAMP_COLUMN = repr(TIMESTAMP_COLUMN)
 G10_CURRENCIES = {"USD", "EUR", "JPY", "GBP", "CHF", "AUD", "NZD", "CAD", "SEK", "NOK"}
 DEFAULT_POSITION_LIMIT_USD = 1_000_000.0
+FX_COMMISSION_TIERS = [
+    {"threshold_usd": 0.0, "tier": 1, "rate_basis_points": 0.20, "minimum_usd_per_order": 2.00},
+    {"threshold_usd": 1_000_000_000.0, "tier": 2, "rate_basis_points": 0.15, "minimum_usd_per_order": 1.50},
+    {"threshold_usd": 2_000_000_000.0, "tier": 3, "rate_basis_points": 0.10, "minimum_usd_per_order": 1.25},
+    {"threshold_usd": 5_000_000_000.0, "tier": 4, "rate_basis_points": 0.08, "minimum_usd_per_order": 1.00},
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -493,21 +499,36 @@ def apply_trades(
     cash_by_product: dict[str, float],
     positions: dict[str, float],
     asset_classes: dict[str, str | None],
+    monthly_fx_trade_value_usd: dict[str, float],
 ) -> float:
     for trade in trades:
         product = trade["product"]
         quantity = float(trade["quantity"])
         price = float(trade["price"])
         trade_value_usd = usd_trade_value(product, quantity, price)
-        commission = commission_for_trade(product, quantity, price, asset_classes)
+        month_key = trade_month_key(trade["timestamp"])
+        month_trade_value_usd = monthly_fx_trade_value_usd.get(month_key, 0.0)
+        commission_details = commission_for_trade(
+            product,
+            quantity,
+            price,
+            asset_classes,
+            month_trade_value_usd,
+        )
+        commission = commission_details["commission"]
         cash_delta = -(quantity * price) - commission
 
         cash += cash_delta
         cash_by_product[product] = cash_by_product.get(product, 0.0) + cash_delta
         positions[product] = positions.get(product, 0.0) + quantity
+        if asset_classes.get(product) == "FX":
+            monthly_fx_trade_value_usd[month_key] = month_trade_value_usd + trade_value_usd
         trade["notional"] = quantity * price
         trade["trade_value_usd"] = trade_value_usd
         trade["commission"] = commission
+        trade["commission_tier"] = commission_details["tier"]
+        trade["commission_rate_basis_points"] = commission_details["rate_basis_points"]
+        trade["commission_minimum_usd"] = commission_details["minimum_usd_per_order"]
         trade["cash_after"] = cash
         trade["product_cash_after"] = cash_by_product[product]
         trade["position_after"] = positions[product]
@@ -520,13 +541,44 @@ def commission_for_trade(
     quantity: float,
     price: float,
     asset_classes: dict[str, str | None],
-) -> float:
+    month_trade_value_usd: float,
+) -> dict[str, float]:
     if asset_classes.get(product) != "FX":
-        return 0.0
+        return {
+            "commission": 0.0,
+            "tier": 0,
+            "rate_basis_points": 0.0,
+            "minimum_usd_per_order": 0.0,
+        }
 
     trade_value_usd = usd_trade_value(product, quantity, price)
-    tier_1_rate = 0.20 / 10000
-    return max(trade_value_usd * tier_1_rate, 2.0)
+    tier = fx_commission_tier(month_trade_value_usd)
+    commission = max(
+        trade_value_usd * tier["rate_basis_points"] / 10_000,
+        tier["minimum_usd_per_order"],
+    )
+    return {
+        "commission": commission,
+        "tier": tier["tier"],
+        "rate_basis_points": tier["rate_basis_points"],
+        "minimum_usd_per_order": tier["minimum_usd_per_order"],
+    }
+
+
+def fx_commission_tier(month_trade_value_usd: float) -> dict[str, float]:
+    active_tier = FX_COMMISSION_TIERS[0]
+    for tier in FX_COMMISSION_TIERS:
+        if month_trade_value_usd >= tier["threshold_usd"]:
+            active_tier = tier
+        else:
+            break
+    return active_tier
+
+
+def trade_month_key(timestamp: Any) -> str:
+    if hasattr(timestamp, "strftime"):
+        return timestamp.strftime("%Y-%m")
+    return str(pd.Timestamp(timestamp).strftime("%Y-%m"))
 
 
 def usd_trade_value(product: str, quantity: float, price: float) -> float:
@@ -596,6 +648,7 @@ def run_backtest(
     cash = 0.0
     cash_by_product = {product: 0.0 for product in products}
     positions = {product: 0.0 for product in products}
+    monthly_fx_trade_value_usd: dict[str, float] = {}
     total = min(len(snapshots), limit) if limit is not None else len(snapshots)
 
     rows = snapshots.iterrows()
@@ -609,7 +662,14 @@ def run_backtest(
         state = build_state(timestamp, row, products, keep_untradable, positions)
         output, lambda_log = run_algorithm_with_log(run_algorithm, state, print_output)
         trades = match_orders(output, state, position_limit_usd)
-        cash = apply_trades(trades, cash, cash_by_product, positions, asset_classes)
+        cash = apply_trades(
+            trades,
+            cash,
+            cash_by_product,
+            positions,
+            asset_classes,
+            monthly_fx_trade_value_usd,
+        )
         mtm, mtm_by_product = portfolio_mtm(positions, state)
         pnl_by_product = product_pnls(cash_by_product, mtm_by_product)
         pnl = sum(pnl_by_product.values())
@@ -705,6 +765,9 @@ def write_logs(
             "notional",
             "trade_value_usd",
             "commission",
+            "commission_tier",
+            "commission_rate_basis_points",
+            "commission_minimum_usd",
             "cash_after",
             "product_cash_after",
             "position_after",
@@ -719,11 +782,7 @@ def write_logs(
         "products": products,
         "position_limit_usd": position_limit_usd,
         "commission_model": {
-            "FX": {
-                "tier": 1,
-                "rate_basis_points": 0.20,
-                "minimum_usd_per_order": 2.0,
-            }
+            "FX": {"tiers": FX_COMMISSION_TIERS}
         },
         "orderbooks": dataframe_records(orderbooks_df),
         "trades": dataframe_records(trades_df),
